@@ -5,7 +5,7 @@ import numpy as np
 import requests
 from mood_map import query_for_emotion
 
-API_KEY = "AIzaSyDK11-b7ly53Q7_fK0Gu6WZXqhb1OUbcSo"  # Replace with your actual key
+API_KEY = st.secrets["API_KEY"]
 
 def get_music_by_emotion(emotion, api_key, max_results=5):
     query = query_for_emotion(emotion)
