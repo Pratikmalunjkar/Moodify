@@ -72,4 +72,23 @@ Error handling for API quota issues or missing results
 
 ---
 
+✅ Phase 5: User History & Profile  
 
+- Integrated **SQLite database** (`history.db`) for storing user’s detected moods and recommended songs.  
+- Created `history.py` to handle database functions (init, add record, fetch history).  
+- Updated `app.py` to:
+  - Save each detected **emotion + recommended song** with timestamp.  
+  - Display a **📜 Mood History** section inside the Streamlit app.  
+- Users can now view their **past moods** and the songs recommended at that time.  
+
+
+
+Deployed on Streamlit Cloud
+.
+Works on desktop & mobile (camera + gallery input supported).
+
+👨‍💻 Author
+
+Pratik Chandrabhan Malunjkar
+MCA Student | Data & Cloud Enthusiast
+GitHub: Pratikmalunjkar
