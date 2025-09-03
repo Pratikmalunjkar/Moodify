@@ -3,14 +3,50 @@ import random
 
 # Main mapping
 EMOTION_KEYWORDS = {
-    "happy":   ["feel good songs", "upbeat pop", "dance hits", "summer vibes"],
-    "sad":     ["uplifting songs", "emotional ballads", "soft piano", "healing music"],
-    "angry":   ["calm instrumental", "relaxing acoustic", "chill beats", "lofi to calm down"],
-    "fear":    ["soothing piano", "comforting melodies", "ambient chill", "gentle acoustic"],
-    "surprise":["trending now", "exciting tracks", "electro pop", "genre mashups"],
-    "disgust": ["mood boosters", "positive vibes", "funk & groove", "good mood music"],
-    "neutral": ["lofi chill", "easy listening", "background jazz", "chillhop"]
+    "happy": [
+        "Hindi upbeat songs",
+        "Marathi dance hits",
+        "Bollywood party tracks",
+        "Zingaat style songs"
+    ],
+    "sad": [
+        "Hindi emotional songs",
+        "Bollywood heartbreak",
+        "Marathi soulful tracks",
+        "Agar Tum Saath Ho type songs"
+    ],
+    "angry": [
+        "Gully Boy rap",
+        "Bollywood intense songs",
+        "Marathi power tracks",
+        "Malhari style music"
+    ],
+    "fear": [
+        "Hindi calming music",
+        "Marathi soothing melodies",
+        "Bollywood comfort songs",
+        "soft acoustic Hindi tracks"
+    ],
+    "surprise": [
+        "Trending Hindi songs",
+        "Bollywood mashups",
+        "Marathi pop fusion",
+        "Ritviz style music"
+    ],
+    "disgust": [
+        "Mood booster Hindi songs",
+        "Positive Marathi tracks",
+        "Bollywood funk",
+        "feel good Indian music"
+    ],
+    "neutral": [
+        "Hindi lo-fi",
+        "Marathi chillhop",
+        "Bollywood easy listening",
+        "background Indian jazz"
+    ]
 }
+
 
 # Handle alternate labels (just in case)
 ALIASES = {
