@@ -43,3 +43,33 @@ Displays results in Streamlit with two modes:
 Error handling for API quota issues or missing results
 
 📄 Final File: app_phase3.py
+
+
+---
+
+## ✅ Phase 4: Deployment
+
+* 📦 Added `requirements.txt` with all required dependencies (`deepface`, `tensorflow`, `tf-keras`, `opencv-python-headless`, `pillow`, `requests`, `streamlit`)
+* 🛠️ Added `runtime.txt` to specify Python version (`python-3.11`) for deployment
+* 🌐 Deployed successfully on **Streamlit Cloud**
+* 📱 Verified **mobile-friendly support** → Upload & camera input works directly on phone
+* 🐞 Fixed deployment issues:
+
+  * TensorFlow + tf-keras compatibility
+  * OpenCV import error (`opencv-python-headless`)
+
+### 🌍 Live App Features after Deployment
+
+* Upload or capture an image (desktop/mobile)
+* Detect **dominant emotion** using DeepFace
+* Fetch and display **YouTube music recommendations** based on mood
+
+📄 **Files Involved:**
+
+* `app.py` → Main Streamlit application
+* `requirements.txt` → Dependencies list
+* `runtime.txt` → Python version configuration
+
+---
+
+
