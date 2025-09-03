@@ -1,5 +1,6 @@
 streamlit
 deepface==0.0.79
+opencv-python==0.0.0  # blocks installation
 opencv-python-headless==4.8.0.76
 numpy
 Pillow
