@@ -7,7 +7,8 @@ import numpy as np
 import requests
 from mood_map import query_for_emotion
 
-API_KEY = "AIzaSyDK11-b7ly53Q7_fK0Gu6WZXqhb1OUbcSo" # Replace with your actual key
+# Securely load API key from Streamlit secrets
+API_KEY = st.secrets["AIzaSyDK11-b7ly53Q7_fK0Gu6WZXqhb1OUbcSo"]
 
 def get_music_by_emotion(emotion, api_key, max_results=5):
     query = query_for_emotion(emotion)
@@ -57,7 +58,7 @@ if image is not None:
     with st.spinner("🔍 Detecting emotion..."):
         try:
             result = DeepFace.analyze(img_path=np.array(image), actions=['emotion'], enforce_detection=False)
-            dominant_emotion = result[0][   'dominant_emotion']
+            dominant_emotion = result[0]['dominant_emotion']
             st.success(f"🎭 Detected Emotion: **{dominant_emotion.capitalize()}**")
 
             songs = get_music_by_emotion(dominant_emotion, API_KEY)
