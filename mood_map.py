@@ -1,3 +1,6 @@
+import random
+
+# Main mapping
 EMOTION_KEYWORDS = {
     "happy": [
         "Hindi upbeat songs",
@@ -63,3 +66,25 @@ EMOTION_KEYWORDS = {
         "Soft English background music"
     ]
 }
+
+# Handle alternate labels (just in case)
+ALIASES = {
+    "joy": "happy",
+    "happiness": "happy",
+    "sadness": "sad",
+    "anger": "angry",
+    "fearful": "fear",
+    "contempt": "disgust",
+    "calm": "neutral"
+}
+
+def normalize_emotion(e: str) -> str:
+    if not e:
+        return "neutral"
+    e = e.strip().lower()
+    return ALIASES.get(e, e if e in EMOTION_KEYWORDS else "neutral")
+
+def query_for_emotion(emotion: str) -> str:
+    """Return one keyword phrase chosen at random for the given emotion."""
+    base = normalize_emotion(emotion)
+    return random.choice(EMOTION_KEYWORDS[base])
